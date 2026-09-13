@@ -1,0 +1,37 @@
+{
+  "name": "quint-youros",
+  "version": "0.1.0",
+  "description": "QUINT: AI-powered programming language and YourOS ecosystem",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run build:language && npm run build:intelligence && npm run build:kernel && npm run build:studio",
+    "build:language": "cd quint-language && npm run build",
+    "build:intelligence": "cd quint-intelligence && npm run build",
+    "build:kernel": "cd youros-kernel && npm run build",
+    "build:studio": "cd quint-studio && npm run build",
+    "test": "npm run test:language && npm run test:intelligence && npm run test:kernel",
+    "test:language": "cd quint-language && npm run test",
+    "test:intelligence": "cd quint-intelligence && npm run test",
+    "test:kernel": "cd youros-kernel && npm run test",
+    "studio": "cd quint-studio && npm run dev",
+    "cli": "node quint-intelligence/cli.js",
+    "dev": "npm run build && npm run studio"
+  },
+  "keywords": [
+    "programming-language",
+    "ai",
+    "code-generation",
+    "operating-system",
+    "natural-language"
+  ],
+  "author": "Julius M",
+  "license": "MIT",
+  "workspaces": [
+    "quint-language",
+    "quint-intelligence",
+    "youros-kernel",
+    "quint-studio",
+    "youros-ui",
+    "marketplace"
+  ]
+}

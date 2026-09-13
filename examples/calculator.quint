@@ -1,0 +1,31 @@
+// Calculator Example - QUINT Language
+
+class Calculator {
+  fn add(a: Number, b: Number) -> Number {
+    return a + b
+  }
+  
+  fn subtract(a: Number, b: Number) -> Number {
+    return a - b
+  }
+  
+  fn multiply(a: Number, b: Number) -> Number {
+    return a * b
+  }
+  
+  fn divide(a: Number, b: Number) -> Number {
+    if b == 0 {
+      throw new Error("Cannot divide by zero")
+    }
+    return a / b
+  }
+}
+
+fn main() {
+  let calc = new Calculator()
+  
+  print("5 + 3 = " + calc.add(5, 3))
+  print("10 - 4 = " + calc.subtract(10, 4))
+  print("6 * 7 = " + calc.multiply(6, 7))
+  print("20 / 4 = " + calc.divide(20, 4))
+}

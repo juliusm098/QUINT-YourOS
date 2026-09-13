@@ -1,0 +1,40 @@
+// User Profile Example - QUINT Language
+
+class User {
+  id: Integer
+  name: String
+  email: String
+  age: Integer
+  
+  fn init(id: Integer, name: String, email: String, age: Integer) {
+    this.id = id
+    this.name = name
+    this.email = email
+    this.age = age
+  }
+  
+  fn displayProfile() -> String {
+    return "User: " + this.name + " (" + this.email + ") - Age: " + this.age
+  }
+  
+  fn isAdult() -> Boolean {
+    return this.age >= 18
+  }
+}
+
+fn main() {
+  let users = [
+    new User(1, "Alice", "alice@example.com", 28),
+    new User(2, "Bob", "bob@example.com", 16),
+    new User(3, "Charlie", "charlie@example.com", 35)
+  ]
+  
+  for user in users {
+    print(user.displayProfile())
+    if user.isAdult() {
+      print("  → Adult")
+    } else {
+      print("  → Minor")
+    }
+  }
+}
